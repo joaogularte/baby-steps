@@ -10,7 +10,7 @@ IO.puts "Result add: #{double.(4)}"
 IO.puts "Result: #{is_binary "oia"}"
 IO.puts "Result: #{length [1, 2, 4, 5]}"
 list_ = [1, 2, 4, 5]
-
+IO.puts elem(list_, 2)
 IO.inspect list_ ++ [34, 54, 65]
 IO.inspect tl(list_), label: 'oia'
 
@@ -21,6 +21,7 @@ IO.inspect tl(list_), label: 'oia'
 IO.puts 'oia' == "oia"
 
 tuple_ = {:oia, "foi ele"}
+IO.puts elem(tuple_, 0)
 IO.inspect tuple_
 IO.puts elem(tuple_, 0)
  put_elem(tuple_, 1, "foi")
