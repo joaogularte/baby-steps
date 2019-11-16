@@ -34,6 +34,7 @@ IO.inspect list ++ [0] ##slow
 
 
 ##tuple - faster but expensive
+# normalmente usadas em retorno de funções
 IO.inspect tuple = {:a, :b, :c, :d}
 IO.inspect put_elem(tuple, 2, :e)
 
