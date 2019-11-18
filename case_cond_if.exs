@@ -34,6 +34,10 @@ end
 IO.puts f.(45,56)
 IO.puts f.(-8, 4)
 
+if true do
+    
+end
+
 unless false do
     IO.puts "foi"
 end
