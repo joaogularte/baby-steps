@@ -12,3 +12,19 @@ defmodule KV do
         end
     end
 end
+
+defmodule Counter do
+    def start_link do
+        Task.start_link(fn -> loop(0) end)
+    end
+
+    defp loop(total) do
+        receive do
+            {:get, caller} ->
+                send caller, total
+                loop(total)
+            {:put, value} -> loop(total+value)
+        end
+    end
+end
+
