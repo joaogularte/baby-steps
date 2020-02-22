@@ -22,7 +22,7 @@ end
 
 IO.puts f.(4,3)
 
-#example 3
+#cond é usado quando é necessário fazer comparação de valores diferentes 
 b = 34
 cond do
     b > 32 -> IO.puts "Foi"
