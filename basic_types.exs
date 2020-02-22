@@ -27,19 +27,20 @@ IO.puts elem(tuple_, 0)
  put_elem(tuple_, 1, "foi")
 IO.inspect tuple_
 
-##linked list
+##linked list - salvas na memoria como listas encadeadas- imutaveis
 list = [12, 43, 54, 65]
 IO.inspect [0] ++ list ##fast  
 IO.inspect list ++ [0] ##slow
 
 
-##tuple - faster but expensive
+##tuple - faster but expensive - elementos salvos na memoria de maneira continua - imutavel 
 # normalmente usadas em retorno de funções
 IO.inspect tuple = {:a, :b, :c, :d}
 IO.inspect put_elem(tuple, 2, :e)
 
-
-## byte_size
-## tuple_size
-## length 
-## String.length
+## size - operation is in constant time
+## length - operation is linear
+## byte_size - number of bytes in a string
+## tuple_size - tuple size 
+## length - list length
+## String.length - number os caracteres in a string
