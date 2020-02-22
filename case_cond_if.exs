@@ -1,7 +1,10 @@
 #example 1
 v = 24
-case {10, 23, 15} do
-    {4, 5, 6} -> IO.puts "Nao sao iguais"
+tuple = {4, 5, 6} 
+
+# case - compara um valor contra varios padrões até encontrar um que combine 
+case tuple do
+    {4, 5, 6} -> IO.puts "Deu match aqui"
     {10, ^v, 15} -> IO.puts "Deu match"
     _ -> IO.puts "vai todos"
 end
@@ -34,6 +37,7 @@ end
 IO.puts f.(45,56)
 IO.puts f.(-8, 4)
 
+# if e unless são macros utilizadas para checar somente uma condição 
 if true do
     
 end
@@ -43,3 +47,9 @@ unless false do
 end
 
 if false, do: IO.puts "true", else: IO.puts "false"
+
+# with - utilizado para checar varias condições 
+user = %{primeiro: "oia", ultimo: "foi"}
+with {:ok, ultimo} <- Map.fetch(user, :ultimo),
+    {:ok, primeiro} <- Map.fetch(user, :primeiro),
+do: IO.puts ultimo <> ", " <> primeiro
