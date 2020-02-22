@@ -5,3 +5,5 @@ x = 1 #atribui a variavel
 {:ok, result} = {:ok, 13}
 b = 3
 ^b = 4
+# para o elixir variaveis que comecem com _ são desconsideradas
+[head | _] = [1, 34, 54]
