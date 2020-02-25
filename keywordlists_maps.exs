@@ -2,13 +2,13 @@
 #     - Keys devem ser ordenadas, pelo dev
 #     - Keys podem ser repetidas
 # geralmente usadas para passar valores opcionais 
-
+# Não é usado para armanezar muitos itens devido a ter a mesma perfornance(ruim) das listas
 list = [a: "oio", b: "foi", a: "oia"]
 IO.puts list[:a]
 
 list = [{:a, 1}, {:b, 3}]
 IO.inspect list == [a: 1, b: 3]
-
+IO.inspect list ++ [c: 6]
 
 #maps - key-value store preferivel
 #     - permite qualquer valor como key
