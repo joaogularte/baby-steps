@@ -14,4 +14,8 @@ defmodule Math do
         IO.inspect @initial_state
         a+b
     end
+
+    def sub(a, b \\ 0) do
+        a - b
+    end
 end
