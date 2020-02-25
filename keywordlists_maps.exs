@@ -27,3 +27,6 @@ users = [
 ]
 
 IO.puts users[:john].name
+
+# put_in
+# update_in
