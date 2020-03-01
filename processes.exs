@@ -27,3 +27,5 @@ IO.puts "IS alive? #{ inspect Process.alive?(pid)}"
 
 # spawn fn -> raise "Foi mal" end - O processo pai continua rodando - Processos isolados
 # spawn_link fn -> raise "Foi mal" end - O processo pai morre tbm - Processos unidos
+
+# modulo Task é construindo sobre spawn e spawn_link
